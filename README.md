@@ -1,2 +1,3 @@
-# Aliance
-multipage site
+# Aliance Production
+Многостраничный корпоративный сайт
+### Автор: Мария Ходачок
