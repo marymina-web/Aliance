@@ -19,11 +19,17 @@ body {
   align-items: center;
   color: #fff;
   height: 94px;
-  position: relative; /*обозначаем что он тоже является слоем и отделяется в этом смысле*/
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
   border-bottom: 1px solid rgba(235, 235, 240, 0.2);
 }
 .header {
-  min-height: 100vh; /*минимум! высота хедера будет равна высоте экрана*/
+  padding-top: 94px;
+  min-height: 100vh; /*минимум! высота хедера будет равна вы
+  соте экрана*/
 }
 .header-image {
   background-image: url('../img/header-bg.jpg');
