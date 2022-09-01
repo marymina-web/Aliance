@@ -25,11 +25,12 @@ body {
   top: 0;
   z-index: 2;
   border-bottom: 1px solid rgba(235, 235, 240, 0.2);
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, height 0.2s;
 }
 .navbar-light {
   background-color: #fff;
   color: #292D33;
+  height: 74px;
   border: 0;
 }
 .navbar-light .header-logo-path {
@@ -58,7 +59,9 @@ body {
   z-index: 0; /*отправляем вниз в слоях*/
 }
 .header-logo {
-  padding: 25px 50px;
+  display: flex;
+  align-items: center;
+  padding: 0px 50px;
   border-right: 1px solid rgba(235, 235, 240, 0.2);
   height: 100%; /*от родителя, т.е 94px (navbar) чтобы не было дробных значений у размеров лого*/
 }
@@ -99,6 +102,8 @@ body {
   cursor: pointer;
 }
 .navbar-button {
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
   height: 100%;
   padding: 34px 50px;
