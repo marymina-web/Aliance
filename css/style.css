@@ -45,13 +45,13 @@ body {
   background-image: url('../img/header-bg.jpg');
   background-size: cover; /*картинка заполняет все пространство*/
   background-repeat: no-repeat; /*и не повторяется*/
-  background-position: center; /*картинка всегда прогружается по центру*/
+  background-position: center bottom -55px;
   position: relative; /*обязательно задаем родителю, чтобы задать у псевдоэлемента position: absolute, связываем их*/
 }
 .header-image::before {
   content: ""; /*обязательное свойство*/
   position: absolute; /*позиционируем плашку относительно родителя (header-image)*/
-  background: rgba(41, 45, 51, 0.6);
+  background: rgba(41, 45, 51, 0.75);
   top: 0; /*прилегает к самому верху экрана*/
   left: 0; /*те задаем координаты*/
   width: 100%;
@@ -75,6 +75,7 @@ body {
 .header-nav-link {
   text-decoration: none;
   font-size: 16px;
+  word-spacing: 0.4px;
   margin-right: 50px;
   color: inherit;
 }
@@ -106,10 +107,10 @@ body {
   align-items: center;
   flex-shrink: 0;
   height: 100%;
-  padding: 34px 50px;
+  padding: 25px 50px;
 }
 .header-button {
-  height: 100%;
+  padding: 26px 60px;
 }
 .seporator {
   width: 150px;
@@ -125,17 +126,20 @@ body {
 .header-title {
   max-width: 1080px;
   font-family: "Bebas Neue Book";
-  font-size: 80px;
-  line-height: 120%;
-  margin: 30px 0;
+  font-size: 78px;
+  line-height: 124%;
+  letter-spacing: 1.4px;
+  word-spacing: 0.7px;
+  margin-top: 22px;
+  margin-bottom: 37px;
 }
 .header-text {
   max-width: 720px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 160%;
-  margin-bottom: 50px;
+  line-height: 165%;
+  margin-bottom: 48px;
 }
 .header-features {
   display: flex;
@@ -147,13 +151,16 @@ body {
   position: relative;
 }
 .header-features-item {
-  padding: 30px 50px;
+  padding: 28px 48px;
+  width: 288px;
   border: 1px solid rgba(235, 235, 240, 0.2);
 }
 .header-features-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
+  margin-bottom: 0;
+  margin-top: 18px;
 }
 .header-features-item:not(:last-child) {
   border-right: none; /*для всех элементов header-features-item кроме последнего */
@@ -164,10 +171,12 @@ body {
 }
 .section-title {
   font-family: "Bebas Neue Book"; 
-  font-weight: 400;
   font-size: 60px;
+  word-spacing: 2px;
   line-height: 120%;
   color: #292D33;
+  margin-top: 23px;
+  margin-bottom: 52px;
 }
 .steps {
   display: flex;
@@ -180,8 +189,10 @@ body {
 }
 .steps-num {
   font-family: "Bebas Neue Book"; 
-  font-weight: 400;
-  font-size: 48px;
+  font-weight: 600;
+  font-size: 47px;
+  letter-spacing: 1.5px;
+  word-spacing: -1.4px;
   line-height: 120%;
   color: #5C8EE6;
   display: flex;
@@ -191,21 +202,25 @@ body {
   content: "";
   height: 1px;
   background: #EBEBF0;
-  width: 100px;
+  width: 300px;
   margin-left: 30px;
 }
 .steps-title {
   font-weight: 400;
   font-size: 28px;
-  line-height: 160%;
+  line-height: 162%;
   color: #292D33;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-top: 35px;
+  margin-bottom: 11px;
+}
+.steps-title:nth-child(2) {
+  width: 300px;
 }
 .steps-text {
+  width: 300px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 160%;
+  line-height: 162%;
   color: #828A99;
   margin-top: 10px;
   margin-bottom: 20px;
