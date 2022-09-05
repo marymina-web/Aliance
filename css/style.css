@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  font-size: 16px;
+}
 @font-face {
   font-family: 'Bebas Neue Book';
   src: url('../fonts/BebasNeueBook.woff') format('woff');
@@ -11,14 +14,14 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 .container {
-  max-width: 1440px;
+  max-width: 90rem;
   margin: auto;
 }
 .navbar {
   display: flex;
   align-items: center;
   color: #fff;
-  height: 94px;
+  height: 5.875rem;
   position: fixed;
   width: 100%;
   left: 0;
@@ -30,14 +33,18 @@ body {
 .navbar-light {
   background-color: #fff;
   color: #292D33;
-  height: 74px;
+  height: 4.625rem;
   border: 0;
+}
+.logo-svg {
+  width: 9rem;
+  height: 2.75rem;
 }
 .navbar-light .header-logo-path {
   fill:#292D33;
 }
 .header {
-  padding-top: 94px;
+  padding-top: 5.875rem;
   min-height: 100vh; /*минимум! высота хедера будет равна вы
   соте экрана*/
 }
@@ -45,7 +52,7 @@ body {
   background-image: url('../img/header-bg.jpg');
   background-size: cover; /*картинка заполняет все пространство*/
   background-repeat: no-repeat; /*и не повторяется*/
-  background-position: center bottom -55px;
+  background-position: center bottom -3.4375rem;
   position: relative; /*обязательно задаем родителю, чтобы задать у псевдоэлемента position: absolute, связываем их*/
 }
 .header-image::before {
@@ -61,43 +68,46 @@ body {
 .header-logo {
   display: flex;
   align-items: center;
-  padding: 0px 50px;
+  padding: 0px 3.125rem;
   border-right: 1px solid rgba(235, 235, 240, 0.2);
   height: 100%; /*от родителя, т.е 94px (navbar) чтобы не было дробных значений у размеров лого*/
 }
 .header-nav {
   display: flex;
-  flex-basis: 100%; /*максимально растягивает элемент по блоку*/
+  flex-grow: 1;
   list-style: none;
-  padding: 0 50px;
+  padding: 0;
+  padding-left: 3.125rem;
   margin: 0;
+}
+.header-nav-item:not(:last-child) {
+  margin-right: 4%;
 }
 .header-nav-link {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   word-spacing: 0.4px;
-  margin-right: 50px;
   color: inherit;
 }
 .header-phone {
   flex-shrink: 0; /*сжатие элемента на ноль*/
   display: flex;
   align-items: center; /*выраниваем по горизонтали номер и иконку телефона*/
-  gap: 10px; /*10px между элементами иконки и телефона*/
-  margin-right: 50px;
+  gap: .625rem; /*10px между элементами иконки и телефона*/
+  margin-right: 3.125rem;
 }
 .header-phone-link {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   color: inherit;
 }
 .button {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
   color: #fff;
   background: #3A71D1;
-  padding: 25px 60px;
+  padding: 1.5625rem 3.75rem;
   border: none;
   display: inline-block; /*кнопки обычно строчно-блочные*/
   cursor: pointer;
@@ -107,90 +117,90 @@ body {
   align-items: center;
   flex-shrink: 0;
   height: 100%;
-  padding: 25px 50px;
-}
-.header-button {
-  padding: 26px 60px;
+  padding: 1.5625rem 3.125rem;
 }
 .seporator {
-  width: 150px;
+  width: 9.375rem;
   height: 2px;
   background: #5C8EE6;
 }
 .header-content {
-  padding-top: 150px;
+  padding-top: 9.375rem;
   position: relative;
   z-index: 1;
   color: #fff;
 }
 .header-title {
-  max-width: 1080px;
+  max-width: 67.5rem;
   font-family: "Bebas Neue Book";
-  font-size: 78px;
+  font-size: 4.875rem;
   line-height: 124%;
   letter-spacing: 1.4px;
   word-spacing: 0.7px;
-  margin-top: 22px;
-  margin-bottom: 37px;
+  margin-top: 1.375rem;
+  margin-bottom: 2.3125rem;
 }
 .header-text {
-  max-width: 720px;
+  max-width: 45rem;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 165%;
-  margin-bottom: 48px;
+  margin-bottom: 3rem;
 }
 .header-features {
   display: flex;
-  min-height: 168px;
+  min-height: 10.5rem;
   padding: 0;
-  margin-top: 100px;
-  list-style: none; /*убрали точки в li*/
+  margin-top: 6.25rem;
+  list-style: none; 
   color: #fff;
   position: relative;
 }
 .header-features-item {
-  padding: 28px 48px;
-  width: 288px;
+  padding: 1.75rem 3rem;
+  width: 18rem;
   border: 1px solid rgba(235, 235, 240, 0.2);
+}
+.header-button {
+  padding: 1.625rem 3.75rem;
 }
 .header-features-text {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
   margin-bottom: 0;
-  margin-top: 18px;
+  margin-top: 1.125rem;
 }
 .header-features-item:not(:last-child) {
-  border-right: none; /*для всех элементов header-features-item кроме последнего */
+  border-right: none; 
 }
 .section {
-  margin-top: 150px;
-  margin-bottom: 150px;
+  margin-top: 9.375rem;
+  margin-bottom: 9.375rem;
 }
 .section-title {
   font-family: "Bebas Neue Book"; 
-  font-size: 60px;
+  font-size: 3.75rem;
   word-spacing: 2px;
   line-height: 120%;
   color: #292D33;
-  margin-top: 23px;
-  margin-bottom: 52px;
+  margin-top: 1.4375rem;
+  margin-bottom: 3.25rem;
 }
 .steps {
   display: flex;
   list-style: none;
   padding: 0;
-  gap: 30px;
+  gap: 1.875rem;
 }
 .steps-item {
-  max-width: 330px;
+  max-width: 20.625rem;
 }
 .steps-num {
   font-family: "Bebas Neue Book"; 
   font-weight: 600;
-  font-size: 47px;
+  font-size: 2.9375rem;
   letter-spacing: 1.5px;
   word-spacing: -1.4px;
   line-height: 120%;
@@ -203,41 +213,77 @@ body {
   height: 1px;
   background: #EBEBF0;
   width: 300px;
-  margin-left: 30px;
+  margin-left: 1.875rem;
 }
 .steps-title {
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 162%;
   color: #292D33;
-  margin-top: 35px;
-  margin-bottom: 11px;
+  margin-top: 2.1875rem;
+  margin-bottom: .6875rem;
 }
 .steps-title:nth-child(2) {
-  width: 300px;
+  width: 18.75rem;
 }
 .steps-text {
-  width: 300px;
+  width: 18.75rem;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 162%;
   color: #828A99;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: .625rem;
+  margin-bottom: 1.25rem;
 }
 .steps-link {
   display: flex;
   align-items: center;
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 160%;
   color: #5C8EE6;
 }
 .steps-link:before {
   content: "";
   height: 1px;
-  width: 40px;
+  width: 2.5rem;
   background: #5C8EE6;
-  margin-right: 20px;
+  margin-right: 1.25rem;
+}
+
+@media (max-width: 1700px) {
+  html {
+    font-size: 14px;
+  }
+  .header-image {
+    background-position: center;
+  }
+}
+
+@media (max-width: 1450px) {
+  html {
+    font-size: 13px;
+  }
+  .header-image {
+    background-position: center;
+  }
+}
+
+@media (max-width: 1350px) {
+  html {
+    font-size: 12px;
+  }
+  .header-image {
+    background-position: center;
+  }
+}
+
+@media (max-width: 1250px) {
+  html {
+    font-size: 11px;
+  }
+  .header-image {
+    background-position: center;
+  }
 }
