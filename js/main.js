@@ -44,7 +44,6 @@ mMenuToggle.addEventListener("click", (event) => { // на кнопку меню
 
 const swiper = new Swiper(".swiper", { // инициализируем слайдер
   speed: 400, //скорость перелистывания слайдера
-  autoHeight: true, //высота слайдера будет подстраиваться под слайды
   slidesPerView: 1, // кол-во слайдов на экране по умолчанию
   navigation: { //подключаем работу кнопок вперед/назад
     nextEl: ".slider-button-next",

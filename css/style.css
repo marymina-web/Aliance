@@ -203,7 +203,7 @@ body {
 }
 .header-features-item {
   padding: 1.75rem 3rem;
-  min-height: 100%; /*от родителя, параметр для слайдера*/
+  height: auto; /* тк в swiper height уже 100%*/
   width: 18rem;
   border: 1px solid rgba(235, 235, 240, 0.2);
 }
@@ -216,6 +216,7 @@ body {
   line-height: 160%;
   margin-bottom: 0;
   margin-top: 1.125rem;
+  height: 100%;
 }
 .section {
   margin-top: 9.375rem;
