@@ -51,12 +51,12 @@ const swiper = new Swiper(".swiper", { // инициализируем слай�
   },
   breakpoints: {
     // when window width is >= 576px
-    576: {
+    540: {
       slidesPerView: 2,
       allowTouchMove: true,
     },
     // when window width is >= px
-    768: {
+    700: {
       slidesPerView: 3,
       allowTouchMove: true,
     },
@@ -82,17 +82,17 @@ const sectionSwiper = new Swiper(".section-swiper", { // инициализир�
   },
   breakpoints: {
     // when window width is >= 576px
-    576: {
+    540: {
       slidesPerView: 2,
       allowTouchMove: true,
     },
     // when window width is >= 1150px
-    1150: {
+     870: {
       slidesPerView: 3,
       allowTouchMove: true,
     },
      // when window width is >= 1201px
-     1201: {
+     1245: {
       slidesPerView: 4,
       allowTouchMove: false,
     },
