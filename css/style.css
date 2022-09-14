@@ -185,6 +185,9 @@ body {
   line-height: 165%;
   margin-bottom: 3rem;
 }
+.header-button {
+  padding: 1.625rem 3.75rem;
+}
 
 
 .header-features {
@@ -202,9 +205,6 @@ body {
   height: auto; /* тк в swiper height уже 100%*/
   width: 18rem;
   border: 1px solid rgba(235, 235, 240, 0.2);
-}
-.header-button {
-  padding: 1.625rem 3.75rem;
 }
 .header-features-text {
   font-weight: 400;
@@ -239,7 +239,7 @@ body {
 .section-title {
   font-family: "Bebas Neue Book"; 
   font-size: 3.75rem;
-  word-spacing: 2px;
+  word-spacing: 2.5px;
   line-height: 120%;
   color: #292D33;
   margin-top: 1.4375rem;
@@ -329,9 +329,6 @@ body {
 }
 
 
-.production {
-  margin-top: -2.7rem;
-}
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -450,17 +447,18 @@ body {
 }
 
 @media (max-width: 1460px) {
-  html {
-    font-size: 13px;
+  .section {
+    margin-top: 7rem;  
+    margin-bottom: 6.2rem;
   }
   .header-content {
     padding-top: 6rem;
   }
   .header-logo {
-    padding: 2rem;
+    padding: 1rem;
   }
   .logo-svg {
-    max-width: 6rem;
+    max-width: 9rem;
   }
   .header-nav {
     padding-left: 2rem;
@@ -485,7 +483,7 @@ body {
     margin-right: 2rem;
   }
   .header-content {
-    padding-top: 5rem;
+    padding-top: 3.4rem;
   }
   .header-phone {
     display: none;
@@ -494,8 +492,8 @@ body {
     height: 5rem;
   }
   .navbar-button {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1.8rem;
+    padding-right: 2.1rem;
   }
   .slider-buttons {
     display: flex;
@@ -508,6 +506,7 @@ body {
   }
   .section-slider-buttons {
     display: flex;
+    
   }
   .trademark-svg {
     flex-shrink: 0;
@@ -516,14 +515,8 @@ body {
 }
 
 @media (max-width: 1060px) {
-  html {
-    font-size: 12px;
-  }
   .container {
     max-width: 60rem;
-  }
-  .header-content {
-    padding-top: 4rem;
   }
   .header-nav {
     display: none;
@@ -532,13 +525,16 @@ body {
     flex-grow: 1;
     justify-content: center;
   }
+  .logo-svg {
+    max-width: 10rem;
+  }
   .mobile-menu-toggle {
     width: 80px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 1.9rem 2.5rem;
+    padding: 2rem 2.1rem;
     border-right: 1px solid rgba(235, 235, 240, 0.2);
   }
   .navbar-light .mobile-menu-line {
@@ -660,47 +656,74 @@ body {
   .container {
     max-width: 40rem;
   }
+  .seporator {
+    width: 7rem;
+  }
   .header-title {
-    font-size: 4.5rem;
+    font-size: 3.2rem;
+    line-height: 130%;
+    letter-spacing: 0px;
+    word-spacing: .5px;
+    margin-bottom: 1rem;
+  }
+  .header-text {
+    line-height: 155%;
+    margin-top: .9rem;
+    margin-bottom: 2rem;
+  }
+  .steps-title {
+  font-size: 1.4rem;
+  margin-top: 1.188rem;
   }
   .section-title {
-    font-size: 4rem;
-  }
-  .header-content {
-    padding-top: 3rem;
+    font-size: 3.5rem;
+    margin-bottom: 2.3rem;
   }
   .card {
     flex-basis: 100%;
   }
+  .card-content {
+    padding: 1.2rem 2rem;
+  }
+  .card-title {
+    font-size: 1.4rem;
+    word-spacing: 0px;
+  }
   .card-text {
-    margin-bottom: 25rem;
+    margin-bottom: 20.5rem;
   }
   .steps-text {
-    width: 16.75rem;
+    margin-bottom: 1.8rem;
+    line-height: 155%;
+  }
+  .steps {
+    margin-bottom: 0;
   }
   .steps-num::after {
     width: 160px;
   }
+  .steps-link::before {
+    width: 3rem;
 }
 
 @media (max-width: 576px) {
   .container {
     max-width: 90%;
   }
-  .header-title {
-    font-size: 4rem;
+  .header-button {
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem 3rem;
+  }
+  .header-features {
+    min-height: 10rem;
+    margin-top: 4rem;
   }
   .section-title {
-    font-size: 3.5rem;
-  }
-  .header-content {
-    padding-top: 3rem;
+    font-size: 2.4rem;
   }
   .steps-num::after {
     width: 160px;
-  }
-  .card-text {
-    margin-bottom: 26rem;
   }
 }
 
@@ -710,23 +733,5 @@ body {
   }
   .steps-num::after {
     width: 210px;
-  }
-}
-
-@media (max-width: 470px) {
-  .card-text {
-    margin-bottom: 24rem;
-  }
-}
-  
-@media (max-width: 430px) {
- .card-text {
-   margin-bottom: 20rem;
- }
-}
-
-@media (max-width: 370px) {
-  .card-text {
-    margin-bottom: 18rem;
   }
 }
